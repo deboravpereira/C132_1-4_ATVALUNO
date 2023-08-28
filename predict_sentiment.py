@@ -16,20 +16,13 @@ sequence = tokenizer.texts_to_sequences(sentence)
 print(sequence[0:2])
 
 # Preenchendo a sequência
-padded = pad_sequences(sequence, maxlen=100, padding='post', truncating='post')
-print(padded[0:2])
 
 # Defina o modelo usando um arquivo .h5
-model=tensorflow.keras.models.load_model('Analise_Ampla.h5')
-
 
 # Teste o modelo
-result=model.predict(padded)
 
-print(result)
 
 # Imprima o resultado
-predict_class = np.argmax(result, axis=1)
-print(predict_class)
+
 
 # {"alegria": 0, "medo": 1, "amor": 2, "tristeza": 3, "raiva": 4, "surpresa": 5}
