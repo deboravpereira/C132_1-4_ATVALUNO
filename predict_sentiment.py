@@ -16,11 +16,12 @@ sequence = tokenizer.texts_to_sequences(sentence)
 print(sequence[0:2])
 
 # Preenchendo a sequência
+padded = pad_sequences(sequence, maxlen=100, padding='post', truncating='post')
+print(padded[0:2])
 
 # Defina o modelo usando um arquivo .h5
 
 # Teste o modelo
-
 
 # Imprima o resultado
 
